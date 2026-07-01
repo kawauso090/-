@@ -9,6 +9,7 @@ public class ActionRecorder : MonoBehaviour
     [SerializeField] private int maxActions = 5;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private TextMeshProUGUI ghostText;
+    [SerializeField] private string ghostMoveText = "Ghost Move!";
 
     private bool ghostSpawned;
 
@@ -36,14 +37,14 @@ public class ActionRecorder : MonoBehaviour
 
         if (gameManager == null)
         {
-            Debug.LogError("GameManager is not assigned.");
+            Debug.LogError("ゲームマネージャーがアサインされていない");
             return;
         }
 
         gameManager.SpawnGhost(new List<ICommand>(commands));
 
         ghostSpawned = true;
-        ghostText.text = "Ghost Move!";
+        ghostText.text = ghostMoveText;
     }
 
     public void SetMaxActions(int value)

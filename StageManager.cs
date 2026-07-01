@@ -19,7 +19,7 @@ public class StageManager : MonoBehaviour
     {
         if (index < 0 || index >= stages.Count)
         {
-            Debug.LogError($"Invalid stage index: {index}");
+            Debug.LogError($"stage indexが存在しない: {index}");
             return;
         }
 
@@ -27,7 +27,7 @@ public class StageManager : MonoBehaviour
 
         if (data == null)
         {
-            Debug.LogError("StageData is null.");
+            Debug.LogError("StageData が null.");
             return;
         }
 
@@ -54,7 +54,7 @@ public class StageManager : MonoBehaviour
 
         if (nextIndex >= stages.Count)
         {
-            Debug.Log("Game Clear!");
+            Debug.Log("ゲームクリア！");
             return;
         }
 

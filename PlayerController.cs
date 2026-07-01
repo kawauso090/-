@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        obstacleLayerMask = LayerMask.GetMask("Wall", "GhostWall");
+        obstacleLayerMask = LayerMask.GetMask(GameTagsAndLayers.Wall, GameTagsAndLayers.GhostWall);
     }
 
     public void OnMove(InputAction.CallbackContext context)

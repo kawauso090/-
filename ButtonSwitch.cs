@@ -35,8 +35,8 @@ public class ButtonSwitch : MonoBehaviour
 
     private bool IsActivator(Collider2D other)
     {
-        return other.CompareTag("Player")
-            || other.CompareTag("Ghost");
+        return other.CompareTag(GameTagsAndLayers.Player)
+            || other.CompareTag(GameTagsAndLayers.Ghost);
     }
 
     private void OpenDoor()

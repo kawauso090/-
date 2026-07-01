@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     {
         if (playerTransform == null)
         {
-            Debug.LogError("Player Transform is not assigned.");
+            Debug.LogError("プレイヤーTransformがアサインされていない");
             return;
         }
 
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
         if (ghostPrefab == null)
         {
-            Debug.LogError("Ghost Prefab is not assigned.");
+            Debug.LogError("GhostのPrefabがアサインされていない");
             return;
         }
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
         if (!ghost.TryGetComponent(out GhostController controller))
         {
-            Debug.LogError("GhostController component not found.");
+            Debug.LogError("GhostControllerが見つからない");
             Destroy(ghost);
             return;
         }
