@@ -19,7 +19,7 @@ public class SceneController : MonoBehaviour
 
         if (nextIndex >= SceneManager.sceneCountInBuildSettings)
         {
-            Debug.LogWarning("No next scene available.");
+            Debug.LogWarning("次のシーンがない");
             return;
         }
 
@@ -40,7 +40,7 @@ public class SceneController : MonoBehaviour
         Application.Quit();
 
 #if UNITY_EDITOR
-        Debug.Log("Quit Game");
+        Debug.Log("ゲーム終了");
 #endif
     }
 

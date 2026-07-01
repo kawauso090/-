@@ -49,8 +49,8 @@ public class MoveCommand : ICommand
 
     private static int GetLayerMask(GameObject target)
     {
-        return target.CompareTag("Ghost")
-            ? LayerMask.GetMask("Wall")
-            : LayerMask.GetMask("Wall", "GhostWall");
+        return target.CompareTag(GameTagsAndLayers.Ghost)
+            ? LayerMask.GetMask(GameTagsAndLayers.Wall)
+            : LayerMask.GetMask(GameTagsAndLayers.Wall, GameTagsAndLayers.GhostWall);
     }
 }
